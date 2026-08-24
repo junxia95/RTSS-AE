@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.coverage
+
+# Environments and editors
+.venv/
+venv/
+.idea/
+.vscode/
+
+# Datasets and generated partitions
+data/
+
+# Runtime output
+logs/
+results/
+tmp/
+output/
+topo/
+checkpoints/
+
+# Paper, AE documents, and evidence/results are distributed separately
+ae/
+paper/
+expected_results/
+
+# Local artifact material
+*.log
+!expected_results/source/fig8/*/server.log
+*.pid
+.DS_Store
+
+# Physical-testbed credentials and generated state
+real_device/deploy_sh/devices_local.py
+real_device/data/
+real_device/logs/
+real_device/logs_real/
+real_device/checkpoints/
+real_device/data_process/
+real_device/.rtss_deadline_run_tag
+
+# LaTeX build products and local backups
+*.aux
+*.out
+*.synctex.gz
+*~

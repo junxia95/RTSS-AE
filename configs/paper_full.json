@@ -1,0 +1,67 @@
+{
+  "name": "paper-full-simulation",
+  "partition_prefix": "seed",
+  "defaults": {
+    "model": "resnet8",
+    "num_users": 10,
+    "frac": 0.2,
+    "epochs": 200,
+    "local_ep": 5,
+    "local_bs": 128,
+    "lr": 0.01,
+    "lr_decay": 0.998,
+    "noniid_case": 5,
+    "client_selection": "comprehensive",
+    "quant_aware": 0,
+    "quant_comm_base_bits": 32,
+    "max_train_samples": 0,
+    "max_test_samples": 0,
+    "aggregation": 1
+  },
+  "autorl_args": {
+    "autorl_quant_aware": 1,
+    "autorl_comprehensive_mix": 0.70,
+    "autorl_quant_bits": "8,16,32",
+    "autorl_train_quant_options": "8,16,32",
+    "autorl_train_precision_mode": "drop_adaptive",
+    "autorl_acc_drop_signal": "regression",
+    "autorl_acc_min_bits_until_accuracy": 42,
+    "autorl_acc_drop_high_pct": 1.5,
+    "autorl_acc_drop_low_pct": 0.35,
+    "autorl_comm_bits_drop_schedule": 1,
+    "autorl_comm_stable_bits": 16,
+    "autorl_late_comm_min_bits": 16,
+    "autorl_late_train_min_bits": 32,
+    "autorl_coverage_gain_weight": 5.0,
+    "autorl_energy_penalty_weight": 0.008,
+    "autorl_latency_penalty_weight": 0.001,
+    "autorl_epsilon": 0.12,
+    "autorl_min_epsilon": 0.02,
+    "autorl_epsilon_decay": 0.994,
+    "autorl_stability_start_frac": 0.55,
+    "autorl_late_min_epsilon": 0.005,
+    "autorl_late_comprehensive_mix": 0.20,
+    "autorl_late_ucb_c_scale": 0.20,
+    "autorl_late_stay_bonus": 0.25,
+    "autorl_late_inbound_threshold_boost": 0.20,
+    "autorl_late_inbound_gap_threshold": 0.03,
+    "autorl_prox_mu": 0.0001,
+    "autorl_prox_start_frac": 0.35,
+    "rl_lr": 0.2
+  },
+  "algorithm_args": {
+    "DFL": {"baseline_active_sampling": 1},
+    "DFedPGP": {"baseline_active_sampling": 1},
+    "LD_SGD": {"baseline_active_sampling": 1}
+  },
+  "matrix": {
+    "datasets": [
+      {"name": "cifar10", "num_classes": 10},
+      {"name": "cifar100", "num_classes": 100},
+      {"name": "TinyImagenet", "num_classes": 200}
+    ],
+    "alphas": [0.5, 0.1, 0.05, 0.01],
+    "seeds": [1, 42, 1024],
+    "algorithms": ["AutoRL_DFL_MM", "DFL_MM", "DFL", "DFedPGP", "LD_SGD"]
+  }
+}
