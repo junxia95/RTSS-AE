@@ -334,7 +334,6 @@ def _validate_run(run_dir):
             "run": result_dir.name,
             "rounds": len(metrics["test_acc"]),
             "best_acc": max(metrics["test_acc"]),
-            "last_acc": metrics["test_acc"][-1],
             "time_s": metrics["time"][-1],
             "comm_mb": metrics["comm"][-1],
             "comm_time_s": metrics["comm_time"][-1],

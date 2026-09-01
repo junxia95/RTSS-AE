@@ -599,7 +599,6 @@ if __name__ == "__main__":
         "start_round": start_round,
         "records": summary_records,
         "best_acc": best_acc,
-        "last_acc": summary_records[-1]["avg_acc"] if summary_records else 0.0,
         "deadline": deadline_summary,
     }
     summary_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")

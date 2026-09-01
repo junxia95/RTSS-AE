@@ -536,7 +536,7 @@ class SelfEvolvingRLController(object):
                     self._param_numel[str(k)] = int(t.numel())
         self.prev_mean_acc = None
         self.last_mean_acc_drop = None
-        self.last_acc_abs_delta = None
+        self.latest_acc_abs_delta = None
         self.acc_min_bits_until_accuracy = float(getattr(args, 'autorl_acc_min_bits_until_accuracy', 0.0))
         self.acc_drop_signal = str(getattr(args, 'autorl_acc_drop_signal', 'regression')).strip().lower()
         if self.acc_drop_signal not in ('regression', 'abs_delta'):
@@ -1001,10 +1001,10 @@ class SelfEvolvingRLController(object):
         if self.prev_mean_acc is not None:
             delta = float(self.prev_mean_acc) - float(performance_value)
             self.last_mean_acc_drop = max(0.0, delta)
-            self.last_acc_abs_delta = abs(delta)
+            self.latest_acc_abs_delta = abs(delta)
         else:
             self.last_mean_acc_drop = None
-            self.last_acc_abs_delta = None
+            self.latest_acc_abs_delta = None
         self.prev_mean_acc = float(performance_value)
 
     def record_round_test_accuracy(self, mean_acc_percent):
@@ -1058,7 +1058,7 @@ class SelfEvolvingRLController(object):
 
     def _drop_adaptive_metric(self):
         if self.acc_drop_signal == 'abs_delta':
-            return self.last_acc_abs_delta
+            return self.latest_acc_abs_delta
         return self.last_mean_acc_drop
 
     def _pick_bits_drop_adaptive(self, options):
@@ -1088,7 +1088,7 @@ class SelfEvolvingRLController(object):
         if self.acc_drop_signal == 'regression' and self.last_mean_acc_drop is not None and float(self.last_mean_acc_drop) == 0.0:
             return max(opts), {
                 'acc_drop': 0.0,
-                'acc_abs_delta': float(self.last_acc_abs_delta) if self.last_acc_abs_delta is not None else 0.0,
+                'acc_abs_delta': float(self.latest_acc_abs_delta) if self.latest_acc_abs_delta is not None else 0.0,
                 'scheduled_train_bits': max(opts),
                 'schedule_reason': 'no_regression',
             }
@@ -1119,7 +1119,7 @@ class SelfEvolvingRLController(object):
 
         meta = {
             'acc_drop': float(self.last_mean_acc_drop) if self.last_mean_acc_drop is not None else None,
-            'acc_abs_delta': float(self.last_acc_abs_delta) if self.last_acc_abs_delta is not None else None,
+            'acc_abs_delta': float(self.latest_acc_abs_delta) if self.latest_acc_abs_delta is not None else None,
             'scheduled_train_bits': int(b),
             'schedule_reason': reason,
             'schedule_metric': m,
