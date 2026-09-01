@@ -13,11 +13,14 @@ This public repository contains:
 - quick and full experiment configurations;
 - environment, Docker, validation, and plotting code;
 - synthetic unit tests; and
+- the expected-result bundle and physical-trace inputs needed to validate and
+  reproduce the reported tables and figures; and
 - the optional heterogeneous Jetson deployment code.
 
-It intentionally does **not** contain the paper, datasets, raw physical traces,
-submitted result files, generated figures, logs, or AE documents. Those
-materials are distributed separately through the RTSS artifact submission.
+It intentionally does **not** contain the paper, datasets, generated figures,
+AE documents, or uncurated runtime outputs. The curated evidence under
+`expected_results/`, including the anonymized Figure 8 trace inputs, is included
+so evaluators do not need a separate HotCRP download.
 
 ## System Requirements
 
@@ -41,9 +44,8 @@ conda activate rtdfl-ae
 make smoke
 ```
 
-`make smoke` checks the environment and runs five synthetic unit tests. If an
-RTSS evidence bundle is placed in `expected_results/`, it additionally
-validates that bundle; otherwise the evidence check is skipped.
+`make smoke` checks the environment, runs five synthetic unit tests, and
+validates the bundled `expected_results/` evidence.
 
 ### Docker
 
@@ -122,10 +124,10 @@ Topology and network cache names are not seed-qualified. For consistent
 sharding, use one fresh workspace and share its `topo/` directory across every
 job.
 
-### Paper-Result Processing Code
+### Reproduce the Bundled Results
 
-The following targets are included as code but require the separately
-distributed `expected_results/` evidence directory:
+The repository includes the `expected_results/` evidence consumed by these
+targets:
 
 ```bash
 make table1
@@ -143,6 +145,7 @@ make validate
 - `configs/`: quick and full experiment specifications.
 - `scripts/`: execution, validation, aggregation, and plotting tools.
 - `tests/`: synthetic core tests.
+- `expected_results/`: hash-verified source records and expected outputs.
 - `real_device/`: optional heterogeneous Jetson deployment workflow.
 
 See `real_device/README.md` for the physical-device environment and local

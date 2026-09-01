@@ -13,7 +13,7 @@ help:
 	  'make quick         Run the 20-round CIFAR-10 five-method comparison' \
 	  'make full          Run the complete simulation matrix (long)' \
 	  'make full-dry-run  Print the complete simulation commands' \
-	  'make plot          Process a separately supplied evidence bundle' \
+	  'make plot          Process the bundled expected-result evidence' \
 	  'make fig8          Recreate Figure 8 from physical-testbed traces' \
 	  'make validate      Validate expected and generated results'
 

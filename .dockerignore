@@ -7,7 +7,6 @@ tmp
 output
 topo
 checkpoints
-expected_results
 paper
 ae
 __pycache__

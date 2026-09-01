@@ -1,0 +1,39 @@
+\begin{table}[t]
+\centering
+\caption{Best test accuracy (\%, mean$\pm$std over three seeds) comparison across three datasets under four non-IID data distributions.}
+\label{tab:test_acc_rtdfl}
+\scriptsize
+\setlength{\tabcolsep}{2.6pt}
+\renewcommand{\arraystretch}{0.95}
+\begin{tabular}{@{}llcccc@{}}
+\toprule
+\textbf{Dataset}
+& \textbf{Method}
+& $\alpha=0.5$
+& $\alpha=0.1$
+& $\alpha=0.05$
+& $\alpha=0.01$ \\
+\midrule
+\multirow{5}{*}{CIFAR-10}
+& AutoRL (ours) & $58.91\pm0.56$ & $42.59\pm4.58$ & $31.47\pm6.45$ & $20.28\pm1.70$ \\
+& DFL-MM        & $58.21\pm1.62$ & $39.32\pm3.53$ & $30.17\pm1.61$ & $18.06\pm0.69$ \\
+& DFL           & $49.59\pm1.22$ & $35.56\pm1.82$ & $30.36\pm4.62$ & $21.90\pm1.80$ \\
+& DFedPGP       & $43.77\pm2.04$ & $27.37\pm2.68$ & $22.06\pm3.53$ & $15.80\pm1.46$ \\
+& LD-SGD        & $47.68\pm0.45$ & $33.55\pm1.83$ & $28.21\pm4.25$ & $20.59\pm2.14$ \\
+\midrule
+\multirow{5}{*}{CIFAR-100}
+& AutoRL (ours) & $49.89\pm1.71$ & $41.87\pm0.90$ & $36.75\pm1.02$ & $28.08\pm1.06$ \\
+& DFL-MM        & $48.03\pm0.32$ & $33.75\pm0.45$ & $25.33\pm0.92$ & $16.39\pm1.07$ \\
+& DFL           & $28.51\pm0.20$ & $18.42\pm0.99$ & $14.98\pm0.02$ & $11.58\pm0.30$ \\
+& DFedPGP       & $25.67\pm0.42$ & $15.03\pm0.51$ & $11.85\pm0.18$ & $8.66\pm0.31$ \\
+& LD-SGD        & $22.25\pm0.55$ & $14.65\pm0.83$ & $11.87\pm0.17$ & $9.46\pm0.10$ \\
+\midrule
+\multirow{5}{*}{Tiny-ImageNet}
+& AutoRL (ours) & $32.01\pm0.32$ & $24.54\pm0.64$ & $19.82\pm0.34$ & $15.03\pm0.48$ \\
+& DFL-MM        & $30.98\pm0.16$ & $20.71\pm0.08$ & $16.36\pm0.28$ & $10.28\pm0.37$ \\
+& DFL           & $29.84\pm0.18$ & $21.91\pm0.24$ & $18.68\pm1.07$ & $14.56\pm0.38$ \\
+& DFedPGP       & $19.86\pm0.06$ & $11.74\pm0.34$ & $9.36\pm0.05$ & $7.12\pm0.25$ \\
+& LD-SGD        & $22.78\pm0.22$ & $14.99\pm0.24$ & $12.05\pm0.68$ & $9.09\pm0.26$ \\
+\bottomrule
+\end{tabular}
+\end{table}

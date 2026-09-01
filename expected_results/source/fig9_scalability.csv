@@ -1,0 +1,46 @@
+clients,dataset,dataset_label,method,method_label,best_acc,source_file
+10,cifar10,CIFAR-10,AutoRL_DFL_MM,RTDFL,42.59166653951009,"mean_seeds=1,42,1024; logs/cifar10_missing_autorl_dflmm_20260526_102500/summary_final/summary_runs.csv"
+10,cifar100,CIFAR-100,AutoRL_DFL_MM,RTDFL,41.87000020345052,"mean_seeds=1,42,1024; logs/result_summaries/cifar100_detail_latest.csv"
+10,TinyImagenet,Tiny-ImageNet,AutoRL_DFL_MM,RTDFL,24.536666870117188,"mean_seeds=1,42,1024; logs/tinyimagenet_baselines_20260524_151827/summary_without_dfedsam/summary_runs.csv"
+10,cifar10,CIFAR-10,DFL_MM,MMDFL,39.31500053405762,"mean_seeds=1,42,1024; logs/cifar10_missing_autorl_dflmm_20260526_102500/summary_final/summary_runs.csv"
+10,cifar100,CIFAR-100,DFL_MM,MMDFL,33.7533327738444,"mean_seeds=1,42,1024; logs/result_summaries/cifar100_detail_latest.csv"
+10,TinyImagenet,Tiny-ImageNet,DFL_MM,MMDFL,20.711666742960613,"mean_seeds=1,42,1024; logs/tinyimagenet_baselines_20260524_151827/summary_without_dfedsam/summary_runs.csv"
+10,cifar10,CIFAR-10,DFL,DFL,35.56000010172526,"mean_seeds=1,42,1024; logs/cifar10_baselines_20260525_143543/summary_final/summary_runs.csv"
+10,cifar100,CIFAR-100,DFL,DFL,18.417666657765707,"mean_seeds=1,42,1024; logs/result_summaries/cifar100_detail_latest.csv"
+10,TinyImagenet,Tiny-ImageNet,DFL,DFL,21.913333574930828,"mean_seeds=1,42,1024; logs/tinyimagenet_baselines_20260524_151827/summary_without_dfedsam/summary_runs.csv"
+10,cifar10,CIFAR-10,DFedPGP,DFedPGP,27.366666793823242,"mean_seeds=1,42,1024; logs/cifar10_baselines_20260525_143543/summary_final/summary_runs.csv"
+10,cifar100,CIFAR-100,DFedPGP,DFedPGP,15.025000063578288,"mean_seeds=1,42,1024; logs/result_summaries/cifar100_detail_latest.csv"
+10,TinyImagenet,Tiny-ImageNet,DFedPGP,DFedPGP,11.739999930063883,"mean_seeds=1,42,1024; logs/tinyimagenet_baselines_20260524_151827/summary_without_dfedsam/summary_runs.csv"
+10,cifar10,CIFAR-10,LD_SGD,LD-SGD,33.548333485921226,"mean_seeds=1,42,1024; logs/cifar10_baselines_20260525_143543/summary_final/summary_runs.csv"
+10,cifar100,CIFAR-100,LD_SGD,LD-SGD,14.654666646321616,"mean_seeds=1,42,1024; logs/result_summaries/cifar100_detail_latest.csv"
+10,TinyImagenet,Tiny-ImageNet,LD_SGD,LD-SGD,14.989999930063883,"mean_seeds=1,42,1024; logs/tinyimagenet_baselines_20260524_151827/summary_without_dfedsam/summary_runs.csv"
+30,cifar10,CIFAR-10,AutoRL_DFL_MM,RTDFL,31.74333318074544,logs/result_summaries/scalability_seed1_detail.csv
+30,cifar100,CIFAR-100,AutoRL_DFL_MM,RTDFL,28.37833309173584,logs/result_summaries/scalability_seed1_detail.csv
+30,TinyImagenet,Tiny-ImageNet,AutoRL_DFL_MM,RTDFL,18.388333002726238,logs/result_summaries/scalability_seed1_detail.csv
+30,cifar10,CIFAR-10,DFL_MM,MMDFL,27.881666501363117,logs/result_summaries/scalability_seed1_detail.csv
+30,cifar100,CIFAR-100,DFL_MM,MMDFL,22.868333498636883,logs/result_summaries/scalability_seed1_detail.csv
+30,TinyImagenet,Tiny-ImageNet,DFL_MM,MMDFL,15.548333168029785,logs/result_summaries/scalability_seed1_detail.csv
+30,cifar10,CIFAR-10,DFL,DFL,22.14999993642171,logs/result_summaries/scalability_seed1_detail.csv
+30,cifar100,CIFAR-100,DFL,DFL,10.429999987284342,logs/result_summaries/scalability_seed1_detail.csv
+30,TinyImagenet,Tiny-ImageNet,DFL,DFL,11.128333250681559,logs/result_summaries/scalability_seed1_detail.csv
+30,cifar10,CIFAR-10,DFedPGP,DFedPGP,19.946666558583576,logs/result_summaries/scalability_seed1_detail.csv
+30,cifar100,CIFAR-100,DFedPGP,DFedPGP,9.047000122070312,logs/result_summaries/scalability_seed1_detail.csv
+30,TinyImagenet,Tiny-ImageNet,DFedPGP,DFedPGP,5.880000034968059,logs/result_summaries/scalability_seed1_detail.csv
+30,cifar10,CIFAR-10,LD_SGD,LD-SGD,21.895000139872234,logs/result_summaries/scalability_seed1_detail.csv
+30,cifar100,CIFAR-100,LD_SGD,LD-SGD,8.992666705449421,logs/result_summaries/scalability_seed1_detail.csv
+30,TinyImagenet,Tiny-ImageNet,LD_SGD,LD-SGD,7.539999961853027,logs/result_summaries/scalability_seed1_detail.csv
+60,cifar10,CIFAR-10,AutoRL_DFL_MM,RTDFL,30.727499961853027,logs/result_summaries/scalability_seed1_detail.csv
+60,cifar100,CIFAR-100,AutoRL_DFL_MM,RTDFL,21.145000060399372,logs/result_summaries/scalability_seed1_detail.csv
+60,TinyImagenet,Tiny-ImageNet,AutoRL_DFL_MM,RTDFL,14.65583316485087,logs/result_summaries/scalability_seed1_detail.csv
+60,cifar10,CIFAR-10,DFL_MM,MMDFL,28.95583375295003,logs/result_summaries/scalability_seed1_detail.csv
+60,cifar100,CIFAR-100,DFL_MM,MMDFL,17.760000149408977,logs/result_summaries/scalability_seed1_detail.csv
+60,TinyImagenet,Tiny-ImageNet,DFL_MM,MMDFL,12.47166665395101,logs/result_summaries/scalability_seed1_detail.csv
+60,cifar10,CIFAR-10,DFL,DFL,17.683499987920126,logs/result_summaries/scalability_seed1_detail.csv
+60,cifar100,CIFAR-100,DFL,DFL,9.24483335018158,logs/result_summaries/scalability_seed1_detail.csv
+60,TinyImagenet,Tiny-ImageNet,DFL,DFL,7.709166685740153,logs/result_summaries/scalability_seed1_detail.csv
+60,cifar10,CIFAR-10,DFedPGP,DFedPGP,15.824000072479247,logs/result_summaries/scalability_seed1_detail.csv
+60,cifar100,CIFAR-100,DFedPGP,DFedPGP,7.126499986648559,logs/result_summaries/scalability_seed1_detail.csv
+60,TinyImagenet,Tiny-ImageNet,DFedPGP,DFedPGP,4.100833336512248,logs/result_summaries/scalability_seed1_detail.csv
+60,cifar10,CIFAR-10,LD_SGD,LD-SGD,16.36666660308838,logs/result_summaries/scalability_seed1_detail.csv
+60,cifar100,CIFAR-100,LD_SGD,LD-SGD,7.735833350817362,logs/result_summaries/scalability_seed1_detail.csv
+60,TinyImagenet,Tiny-ImageNet,LD_SGD,LD-SGD,5.856666644414266,logs/result_summaries/scalability_seed1_detail.csv

@@ -1,0 +1,39 @@
+\begin{table}[t]
+\centering
+\caption{Comparison of training time and communication overhead on Tiny-ImageNet. Time and communication are averaged over three seeds at the first round where all runs reach the target accuracy. Bold indicates the best value among methods with three successful runs.}
+\label{tab:time_comm_tinyimagenet}
+\scriptsize
+\setlength{\tabcolsep}{2.4pt}
+\renewcommand{\arraystretch}{0.95}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}llcccccccccc@{}}
+\toprule
+\multirow{2}{*}{\textbf{Hetero. Settings}}
+& \multirow{2}{*}{\textbf{Accuracy (\%)}}
+& \multicolumn{2}{c}{\textbf{AutoRL (ours)}}
+& \multicolumn{2}{c}{\textbf{DFL-MM}}
+& \multicolumn{2}{c}{\textbf{DFL}}
+& \multicolumn{2}{c}{\textbf{DFedPGP}}
+& \multicolumn{2}{c}{\textbf{LD-SGD}} \\
+\cmidrule(lr){3-4}\cmidrule(lr){5-6}\cmidrule(lr){7-8}\cmidrule(lr){9-10}\cmidrule(l){11-12}
+& & Time & Comm. & Time & Comm. & Time & Comm. & Time & Comm. & Time & Comm. \\
+\midrule
+\multirow{2}{*}{$\alpha=0.5$}
+& 18 & \textbf{589s} & \textbf{733M} & 622s & 1426M & 3097s & 9018M & 8442s & 20872M & 3334s & 4822M \\
+& 28 & \textbf{1657s} & \textbf{2041M} & 2933s & 6419M & 8251s & 23241M & N/A & N/A & N/A & N/A \\
+\midrule
+\multirow{2}{*}{$\alpha=0.1$}
+& 10 & \textbf{361s} & \textbf{555M} & 522s & 1095M & 2496s & 7252M & 6520s & 16224M & 3352s & 4860M \\
+& 20 & \textbf{1600s} & \textbf{2219M} & 5703s & 12532M & 8197s & 23158M & N/A & N/A & N/A & N/A \\
+\midrule
+\multirow{2}{*}{$\alpha=0.05$}
+& 8 & 473s & \textbf{638M} & \textbf{457s} & 1070M & 2323s & 6780M & 5654s & 14144M & 3114s & 4592M \\
+& 16 & \textbf{1568s} & \textbf{2283M} & 6119s & 13271M & 7147s & 20237M & N/A & N/A & N/A & N/A \\
+\midrule
+\multirow{2}{*}{$\alpha=0.01$}
+& 6 & 313s & \textbf{427M} & \textbf{276s} & 713M & 1793s & 5160M & 4151s & 10439M & 1459s & 2022M \\
+& 8 & \textbf{757s} & \textbf{931M} & 2336s & 4992M & 2906s & 8476M & N/A & N/A & 5739s & 8221M \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}

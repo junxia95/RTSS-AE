@@ -1,5 +1,8 @@
 * text=auto eol=lf
 
+# Preserve every evidence byte so published SHA256 values survive cloning.
+expected_results/** -text
+
 *.pkl binary
 *.pdf binary
 *.png binary

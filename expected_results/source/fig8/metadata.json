@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "paper_result": "Figure 8",
+  "description": "Physical-testbed accuracy, cumulative completed-round active runtime, and HP 9800 power traces for RTDFL, MMDFL, and DFL.",
+  "expected_rounds_per_method": 100,
+  "initial_device_energy_j": 150000.0,
+  "initial_total_energy_kj": 1500.0,
+  "minimum_power_coverage_fraction": 0.95,
+  "accuracy_metric": "avg_acc",
+  "time_definition": "Cumulative completed-round durations from the server log; the overnight interruption between RTDFL sessions is excluded.",
+  "energy_definition": "Nominal 1500 kJ initial budget minus the integral of active power over each completed round, summed across the three HP 9800 streams; not a direct state-of-charge measurement.",
+  "methods": {
+    "dfl": {
+      "server_log": "dfl/server.log",
+      "expected_power_streams": 3,
+      "power_sessions": [
+        {
+          "directory": "dfl/power/session_1",
+          "start_date": "2026-05-26"
+        }
+      ]
+    },
+    "mmdfl": {
+      "server_log": "mmdfl/server.log",
+      "expected_power_streams": 3,
+      "power_sessions": [
+        {
+          "directory": "mmdfl/power/session_1",
+          "start_date": "2026-05-25"
+        }
+      ]
+    },
+    "rtdfl": {
+      "server_log": "rtdfl/server.log",
+      "expected_power_streams": 3,
+      "power_sessions": [
+        {
+          "directory": "rtdfl/power/session_1",
+          "start_date": "2026-05-25"
+        },
+        {
+          "directory": "rtdfl/power/session_2",
+          "start_date": "2026-05-26"
+        }
+      ]
+    }
+  },
+  "plot": {
+    "smooth_window": 3,
+    "interpolation_points": 500,
+    "maximum_time_hours": 4.0,
+    "minimum_remaining_energy_kj": 900.0,
+    "initial_accuracy_percent": 10.0
+  }
+}

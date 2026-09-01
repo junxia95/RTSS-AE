@@ -1,0 +1,35 @@
+{
+  "source_host": "author experiment server",
+  "source_repository": "MMDFL",
+  "files": {
+    "source/table1.tex": {
+      "origin": "latex/table1.tex",
+      "transform": "restricted to the four alpha values reported in the final paper",
+      "sha256": "5643d6ab2ff147143fab0e14c1601691ece687536cfcafed48af58f02e75118d"
+    },
+    "source/table2.tex": {
+      "origin": "latex/table2.tex",
+      "transform": "restricted to the four alpha values reported in the final paper",
+      "sha256": "d7d0b4673984369989c633f356a8ba73610db71ed27b39c992bf720ef89c04cc"
+    },
+    "source/fig8/manifest.csv": {
+      "origin": "physical testbed runs collected on 2026-05-25 and 2026-05-26",
+      "transform": "files renamed into method/session directories; private LAN prefixes in server logs replaced by the documentation-only 192.0.2.0/24 prefix; metric, timestamp, round, and power records unchanged",
+      "sha256": "ab6234625496a4bab7cc05e24c0c1c6a885d87c3564334fa791c44318610970a"
+    },
+    "source/fig9_scalability.csv": {
+      "origin": "latex/generated/scalability_10client_mean3seed_compactgap_value12_by_client_data.csv",
+      "sha256": "09fbc36213988ba8bbc1cdeb417c8449d3d30f3477f03c824d28aab36de9e694"
+    },
+    "raw/tinyimagenet_round_metrics/manifest.csv": {
+      "origin": "output/5/{0.5,0.1,0.05,0.01}",
+      "sha256": "b00e884a1a43ac5fb40fc8786d15a7e2dfff262f44d1e8873fb5659ee60c88a8"
+    }
+  },
+  "notes": [
+    "Table I and Table II are derived from completed three-seed runs.",
+    "Figure 8 is derived from one complete 100-round physical run per method; RTDFL spans two measurement sessions.",
+    "Figure 8 server-log addresses are anonymized for public release using RFC 5737 documentation addresses.",
+    "Figure 9 uses three-seed means for 10 clients and seed 1 for 30 and 60 clients."
+  ]
+}

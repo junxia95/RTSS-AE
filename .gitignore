@@ -22,10 +22,9 @@ output/
 topo/
 checkpoints/
 
-# Paper, AE documents, and evidence/results are distributed separately
+# Paper and AE documents are distributed separately
 ae/
 paper/
-expected_results/
 
 # Local artifact material
 *.log
