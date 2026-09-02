@@ -17,8 +17,7 @@ This public repository contains:
   reproduce the reported tables and figures; and
 - the optional heterogeneous Jetson deployment code.
 
-It intentionally does **not** contain the paper, datasets, generated figures,
-AE documents, or uncurated runtime outputs. The curated evidence under
+ The curated evidence under
 `expected_results/`, including the anonymized Figure 8 trace inputs, is included
 so evaluators do not need a separate HotCRP download.
 
